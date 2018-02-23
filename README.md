@@ -53,6 +53,7 @@ All options, **except [target](#target)**, are optional, and have sensible defau
 
 ```es6
 jump('.target', {
+  container: window,
   duration: 1000,
   offset: 0,
   callback: undefined,
@@ -64,6 +65,7 @@ jump('.target', {
 Explanation of each option follows:
 
 * [target](#target)
+* [container](#container)
 * [duration](#duration)
 * [offset](#offset)
 * [callback](#callback)
@@ -100,6 +102,15 @@ jump(node)
 // the element referenced by the selector is determined using document.querySelector
 
 jump('.target')
+```
+### container
+
+Pass a custom container element instead of scrolling `window`. Can be a CSS selector or a node.
+
+```es6
+jump('.target', {
+  container: '#custom-scroll-container'
+})
 ```
 
 ### duration
